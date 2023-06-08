@@ -27,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://EidanGar.github.io/Portfolio",
+  "homepage": "https://eidangar.github.io/Portfolio/",
   "browserslist": [
     ">0.2%",
     "not dead",
