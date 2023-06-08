@@ -4,9 +4,6 @@
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
-  "engines": {
-    "node": "16.x"
-  },
   "dependencies": {
     "@types/react-router-dom": "5.3.3",
     "react": "18.0.0",
