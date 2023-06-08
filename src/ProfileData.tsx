@@ -6,7 +6,7 @@ export type Info = {
   myRole: string;
   difficulty: string;
   solution: string;
-  features?: string[];
+  features: string[];
 };
 
 export type Project = {
@@ -19,7 +19,7 @@ export type Project = {
   };
   image: string;
   technologies: string[];
-  info?: Info;
+  info: Info;
 };
 
 export const projects: Project[] = [

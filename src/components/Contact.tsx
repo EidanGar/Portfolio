@@ -55,11 +55,10 @@ const Contact = () => {
   const onInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const target = e.target as HTMLInputElement | HTMLTextAreaElement;
-    const { value, name } = target;
+    const { value, name } = e.target;
     setEmailData((prev) => ({ ...prev, [name]: value }));
   };
-
+  
   return (
     <div id="contact">
       <div className="email__container">
