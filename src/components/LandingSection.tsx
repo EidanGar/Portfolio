@@ -1,4 +1,5 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { contacts } from "../ProfileData";
 
 const LandingSection = () => {
   return (
@@ -11,7 +12,7 @@ const LandingSection = () => {
         <span className="landing__phrase">I am a Web Developer</span>
         <div className="landing__links">
           <a
-            href="http://google.com"
+            href={contacts[0].link}
             target="_blank"
             rel="noopener noreferrer"
             className="links__resume"

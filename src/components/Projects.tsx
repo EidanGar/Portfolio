@@ -1,83 +1,45 @@
 import { BsGithub, BsYoutube } from "react-icons/bs";
-import { useRef } from "react";
+import { projects, Project, Info } from "../ProfileData";
+import Accordion from "./Accordion";
 
-type Project = {
-  name: string;
-  description: string;
-  links: {
-    codeUrl: string;
-    liveUrl: string;
-    videoUrl?: string;
-  };
-  image: string;
-  technologies: string[];
-};
-
-const projects: Project[] = [
-  {
-    name: "Sorting Algorithm Visualizer",
-    description:
-      "This is a Sorting Algorithm Visualizer web app that lets users visualize sorting algorithms, like Bubble Sort and Merge Sort, with real-time animation. Users can select sorting algorithms, adjust animation speed, and change array size.",
-    links: {
-      codeUrl: "https://github.com/EidanGar/SortingVisualizer",
-      liveUrl: "https://codesandbox.io/s/github/EidanGar/SortingVisualizer",
-      videoUrl:
-        "https://drive.google.com/file/d/10-48A6BFwyJxKkYvi4B7X3NcOvnui5cv/view?usp=drivesdk"
-    },
-    image: "https://i.postimg.cc/t4Pp2YZS/Sorting-Visualizer-1.png",
-    technologies: ["Styled-components", "React", "TypeScript"]
-  },
-  {
-    name: "CoinTrackr",
-    description:
-      "A modern and user-friendly Crypto Tracker that allows users to stay up-to-date with real-time data on various cryptocurrencies. Perfect for cryptocurrency investors and enthusiasts. (Volatile Api, info might be outdated)",
-    links: {
-      codeUrl: "https://github.com/EidanGar/CoinTrackr",
-      liveUrl: "https://eidangar.github.io/CoinTrackr/",
-      videoUrl:
-        "https://drive.google.com/file/d/1uCGj4Cu8kAcVN-yPWiEUcjalUSE9fMMi/view?usp=drivesdk"
-    },
-    image: "https://i.postimg.cc/bvzWkJQ2/Coin-Trackr.png",
-    technologies: ["React", "TypeScript", "AJAX"]
-  },
-  {
-    name: "Employee Directory",
-    description:
-      "Easily manage your organization's personnel information with this Employee Directory application. Search, filter, and view employee profiles with a user-friendly interface that works on desktop and mobile devices.",
-    links: {
-      codeUrl: "https://github.com/EidanGar/EmployeeDirectory",
-      liveUrl: "https://codesandbox.io/s/github/EidanGar/EmployeeDirectory",
-      videoUrl: ""
-    },
-    image: "https://i.postimg.cc/Kv328RNG/Employee-Directory.png",
-    technologies: [
-      "Bootstrap",
-      "React",
-      "TypeScript",
-      "Redux",
-      "React-router",
-      "AJAX"
-    ]
-  }
-];
+const MoreInfo = (info: Info) => (
+  <div className="project__info">
+    {info.myRole && (
+      <div className="info__content">
+        <h4 className="info__title">My Role</h4>
+        <p className="info__text">{info.myRole}</p>
+      </div>
+    )}
+    {info.difficulty && (
+      <div className="info__content">
+        <h4 className="info__title">Project Difficulties</h4>
+        <p className="info__text">{info.difficulty}</p>
+      </div>
+    )}
+    {info.difficulty && (
+      <div className="info__content">
+        <h4 className="info__title">My Solution</h4>
+        <p className="info__text">{info.solution}</p>
+      </div>
+    )}
+    {!!(info?.features ?? []).length && (
+      <div className="info__content">
+        <h4 className="info__title">Notable Features</h4>
+        <ul>
+          {info.features.map((feature, idx) => (
+            <li key={idx}>{feature}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+);
 
 const ProjectComponent = ({ project }: { project: Project }) => {
-  const projectImageRef = useRef<HTMLImageElement>(null);
-
-  const resizeImage = () => {
-    if (projectImageRef.current == null) return;
-    const image = projectImageRef.current;
-    if (image.offsetHeight < (image.parentElement?.offsetHeight ?? 400)) {
-      image.style.height = "100%";
-    }
-  };
-
   return (
     <div className="projects__project">
       <a href={project.links.liveUrl}>
         <img
-          onLoad={resizeImage}
-          ref={projectImageRef}
           className={`project__image project-image-${projects.findIndex(
             (arrProject) => arrProject.name === project.name
           )}`}
@@ -90,9 +52,14 @@ const ProjectComponent = ({ project }: { project: Project }) => {
         <p className="project__description">{project.description}</p>
         <div className="project__technologies">
           {project.technologies.map((technology, idx) => (
-            <span key={idx} className="project__technology">{technology}</span>
+            <span key={idx} className="project__technology">
+              {technology}
+            </span>
           ))}
         </div>
+        <Accordion name={"More Info"}>
+          <MoreInfo {...project.info} />
+        </Accordion>
         <div className="project__links">
           <a
             href={project.links.liveUrl}
