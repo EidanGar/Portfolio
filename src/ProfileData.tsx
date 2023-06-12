@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "This is a Sorting Algorithm Visualizer web app that lets users visualize sorting algorithms, like Bubble Sort and Merge Sort, with real-time animation. Users can select sorting algorithms, adjust animation speed, and change array size.",
     links: {
       codeUrl: "https://github.com/EidanGar/SortingVisualizer",
-      liveUrl: "https://098ze7.csb.app/",
+      liveUrl: "https://sorting-visualizer-roan.vercel.app/",
       videoUrl:
         "https://drive.google.com/file/d/10-48A6BFwyJxKkYvi4B7X3NcOvnui5cv/view?usp=drivesdk"
     },
@@ -56,7 +56,7 @@ export const projects: Project[] = [
       "A modern and user-friendly Crypto Tracker that allows users to stay up-to-date with real-time data on various cryptocurrencies. Perfect for cryptocurrency investors and enthusiasts. (Volatile Api, info might be outdated)",
     links: {
       codeUrl: "https://github.com/EidanGar/CoinTrackr",
-      liveUrl: "https://dpjhzl.csb.app/",
+      liveUrl: "https://coin-trackr.vercel.app/",
       videoUrl:
         "https://drive.google.com/file/d/1uCGj4Cu8kAcVN-yPWiEUcjalUSE9fMMi/view?usp=drivesdk"
     },
@@ -81,7 +81,7 @@ export const projects: Project[] = [
       "Easily manage your organization's personnel information with this Employee Directory application. Search, filter, and view employee profiles with a user-friendly interface that works on desktop and mobile devices.",
     links: {
       codeUrl: "https://github.com/EidanGar/EmployeeDirectory",
-      liveUrl: "https://3wfts3.csb.app/",
+      liveUrl: "https://employee-directory-coral.vercel.app/",
       videoUrl:
         "https://drive.google.com/file/d/1GCBhucMAnTPVa6abMjbS_qspFUWYLJSZ/view?usp=share_link"
     },
