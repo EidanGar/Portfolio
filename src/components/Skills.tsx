@@ -1,12 +1,16 @@
-import cssIcon from "../images/cssIcon.png";
-import htmlIcon from "../images/htmlIcon.png";
-import javascriptIcon from "../images/javascriptIcon.png";
-import typescriptIcon from "../images/typescriptIcon.png";
-import bootstrapIcon from "../images/bootstrapIcon.png";
-import sassIcon from "../images/sassIcon.png";
-import reactIcon from "../images/reactIcon.png";
-import reduxIcon from "../images/reduxIcon.png";
-import gitIcon from "../images/gitIcon.png";
+import {
+  cssIcon,
+  htmlIcon,
+  javascriptIcon,
+  typescriptIcon,
+  bootstrapIcon,
+  sassIcon,
+  reactIcon,
+  reduxIcon,
+  gitIcon,
+  nextjsIcon,
+  tailwindcssIcon,
+} from "../images";
 
 type Skill = {
   icon: any;
@@ -16,40 +20,48 @@ type Skill = {
 const mySkills: Skill[] = [
   {
     skillName: "HTML",
-    icon: htmlIcon
+    icon: htmlIcon,
   },
   {
     skillName: "CSS",
-    icon: cssIcon
+    icon: cssIcon,
   },
   {
     skillName: "JavaScript",
-    icon: javascriptIcon
+    icon: javascriptIcon,
   },
   {
     skillName: "TypeScript",
-    icon: typescriptIcon
+    icon: typescriptIcon,
   },
   {
     skillName: "Boostrap",
-    icon: bootstrapIcon
+    icon: bootstrapIcon,
   },
   {
     skillName: "React",
-    icon: reactIcon
+    icon: reactIcon,
   },
   {
     skillName: "SASS",
-    icon: sassIcon
+    icon: sassIcon,
   },
   {
     skillName: "Redux",
-    icon: reduxIcon
+    icon: reduxIcon,
   },
   {
     skillName: "Git",
-    icon: gitIcon
-  }
+    icon: gitIcon,
+  },
+  {
+    skillName: "NextJS",
+    icon: nextjsIcon,
+  },
+  {
+    skillName: "TailwindCSS",
+    icon: tailwindcssIcon,
+  },
 ];
 
 const Skills = () => {
@@ -62,11 +74,11 @@ const Skills = () => {
       <div className="skills__container">
         {mySkills.map((skill, idx) => (
           <div title={skill.skillName} key={idx} className="skills__bubble">
-              <img
-                className="skills__icon"
-                src={skill.icon}
-                alt={skill.skillName}
-              />
+            <img
+              className="skills__icon"
+              src={skill.icon}
+              alt={skill.skillName}
+            />
           </div>
         ))}
       </div>
