@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.cee93c97.chunk.css",
-    "main.js": "/static/js/main.629f1178.chunk.js",
-    "main.js.map": "/static/js/main.629f1178.chunk.js.map",
+    "main.js": "/static/js/main.b65c0df7.chunk.js",
+    "main.js.map": "/static/js/main.b65c0df7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.545ffd70.js",
     "runtime-main.js.map": "/static/js/runtime-main.545ffd70.js.map",
     "static/js/2.cd171a31.chunk.js": "/static/js/2.cd171a31.chunk.js",
@@ -13,14 +13,16 @@
     "static/media/bootstrapIcon.f132cb79.png": "/static/media/bootstrapIcon.f132cb79.png",
     "static/media/cssIcon.463e319b.png": "/static/media/cssIcon.463e319b.png",
     "static/media/htmlIcon.94972f53.png": "/static/media/htmlIcon.94972f53.png",
+    "static/media/nextjsIcon.48ddc812.png": "/static/media/nextjsIcon.48ddc812.png",
     "static/media/reactIcon.b76698cf.png": "/static/media/reactIcon.b76698cf.png",
     "static/media/reduxIcon.1b4bb5fc.png": "/static/media/reduxIcon.1b4bb5fc.png",
-    "static/media/sassIcon.7cdbf6b5.png": "/static/media/sassIcon.7cdbf6b5.png"
+    "static/media/sassIcon.7cdbf6b5.png": "/static/media/sassIcon.7cdbf6b5.png",
+    "static/media/tailwindcssIcon.deaf71ff.png": "/static/media/tailwindcssIcon.deaf71ff.png"
   },
   "entrypoints": [
     "static/js/runtime-main.545ffd70.js",
     "static/js/2.cd171a31.chunk.js",
     "static/css/main.cee93c97.chunk.css",
-    "static/js/main.629f1178.chunk.js"
+    "static/js/main.b65c0df7.chunk.js"
   ]
 }
